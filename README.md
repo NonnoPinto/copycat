@@ -1,3 +1,6 @@
+[![Static Badge](https://img.shields.io/badge/8540-green?logo=splunk&logoSize=auto&labelColor=gray)](https://splunkbase.splunk.com/app/8540)
+
+
 # ![Logo](copycat/static/appIcon.png) CopyCat
 
 A lightweight, dependency-free Splunk add-on that generates realistic mock logs for testing AI agents, parsing rules, and data analysis workflows.
