@@ -25,7 +25,7 @@ alwaysApply: true
 
 - Scripted input expectations (Splunk):
   - Script must be non-interactive and fast; write events to stdout only (avoid noisy stderr).
-  - The first positional argument is the log type (e.g. `app`, `security`, `webserver`, etc.), matching keys in `log_generators`.
+  - The first positional argument is the log type (e.g. `app`, `security`, `database`, etc.), matching keys in `log_generators`.
   - Maintain backwards compatibility for existing log types and their stanzas.
 
 - When adding a new log type:

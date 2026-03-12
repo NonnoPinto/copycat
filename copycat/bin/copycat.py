@@ -63,11 +63,6 @@ def generate_database_logs(timestamp):
     operations = ['SELECT', 'INSERT', 'UPDATE', 'DELETE', 'CREATE', 'DROP']
     return f"{timestamp} {random.choice(operations)} query executed on table {fake_word()} by user {fake_user_name()} - {random.randint(1, 1000)}ms"
 
-def generate_webserver_logs(timestamp):
-    methods = ['GET', 'POST', 'PUT', 'DELETE', 'PATCH']
-    status_codes = [200, 201, 400, 401, 403, 404, 500, 502, 503]
-    return f"{fake_ipv4()} - - [{timestamp.strftime('%d/%b/%Y:%H:%M:%S +0000')}] \"{random.choice(methods)} {fake_uri_path()} HTTP/1.1\" {random.choice(status_codes)} {random.randint(100, 50000)}"
-
 def generate_system_logs(timestamp):
     processes = ['systemd', 'kernel', 'cron', 'ssh', 'sudo']
     return f"{timestamp} {random.choice(processes)}[{random.randint(1000, 9999)}]: {fake_sentence()}"
@@ -91,7 +86,6 @@ log_generators = {
     "network": generate_network_logs,
     "docker": generate_docker_logs,
     "database": generate_database_logs,
-    "webserver": generate_webserver_logs,
     "system": generate_system_logs,
     "api": generate_api_logs,
     "error": generate_error_logs,
