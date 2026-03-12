@@ -1,6 +1,5 @@
 [![Static Badge](https://img.shields.io/badge/8540-green?logo=splunk&logoSize=auto&labelColor=gray)](https://splunkbase.splunk.com/app/8540)
 
-
 # ![Logo](copycat/static/appIcon.png) CopyCat
 
 A lightweight, dependency-free Splunk add-on that generates realistic mock logs for testing AI agents, parsing rules, and data analysis workflows.
@@ -32,7 +31,6 @@ CopyCat generates various distinct log types, each with realistic formatting and
 | `network`   | Network traffic logs (TCP/UDP/ICMP with actions)        | `copycat_network`   | `copycat:network`   |
 | `docker`    | Container lifecycle events                              | `copycat_docker`    | `copycat:docker`    |
 | `database`  | SQL query execution logs                                | `copycat_database`  | `copycat:database`  |
-| `webserver` | Apache/Nginx-style access logs                          | `copycat_webserver` | `copycat:webserver` |
 | `system`    | Linux system daemon logs                                | `copycat_system`    | `copycat:system`    |
 | `api`       | REST API request/response logs                          | `copycat_api`       | `copycat:api`       |
 | `error`     | Exception and error stack traces                        | `copycat_error`     | `copycat:error`     |
@@ -68,7 +66,7 @@ copycat.py [--help] [--count N] [--start ISO_DATE] [--end ISO_DATE] [log_type[,l
 
 ### Arguments
 
-- `log_type` (optional): Type of log to generate. Choices: `app`, `security`, `network`, `docker`, `database`, `webserver`, `system`, `api`, `error`, `metrics`. If omitted, a random type is selected.
+- `log_type` (optional): Type of log to generate. Choices: `app`, `security`, `network`, `docker`, `database`, `system`, `api`, `error`, `metrics`. If omitted, a random type is selected.
 - `--count`, `-n`: Number of log entries to generate (default: random 1–5)
 - `--start`: Start datetime in ISO format (requires `--end`)
 - `--end`: End datetime in ISO format (requires `--start`)
